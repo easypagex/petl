@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Pages for Pet Small Businesses — EasyPageX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #FFF8F0;
+      --plum: #2D1B4E;
+      --amber: #F5A623;
+      --coral: #FF6B6B;
+      --mint: #4ECDC4;
+      --lavender: #B8A9D9;
+      --white: #ffffff;
+      --text: #2D1B4E;
+      --text-soft: #6B5B8A;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ─── TICKER ─── */
+    .ticker-wrap {
+      background: var(--plum);
+      color: var(--amber);
+      padding: 10px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .ticker-inner {
+      display: inline-flex;
+      animation: ticker 28s linear infinite;
+      font-family: 'Fredoka One', cursive;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+    .ticker-inner span { padding: 0 2.5rem; }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      background: var(--white);
+      border-bottom: 2px solid var(--cream);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 16px rgba(45,27,78,0.06);
+    }
+    .logo {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.5rem;
+      color: var(--plum);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .logo span { color: var(--amber); }
+    .nav-cta {
+      background: var(--coral);
+      color: var(--white);
+      font-family: 'Fredoka One', cursive;
+      font-size: 1rem;
+      padding: 0.6rem 1.4rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 14px rgba(255,107,107,0.35);
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,107,107,0.45); }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-bg-paws {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .paw-float {
+      position: absolute;
+      font-size: 2.2rem;
+      opacity: 0.07;
+      animation: floatPaw 14s ease-in-out infinite;
+    }
+    @keyframes floatPaw {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50%       { transform: translateY(-22px) rotate(10deg); }
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      background: var(--amber);
+      color: var(--plum);
+      font-family: 'Fredoka One', cursive;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      padding: 0.35rem 1.1rem;
+      border-radius: 50px;
+      margin-bottom: 1.4rem;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      line-height: 1.15;
+      color: var(--plum);
+      max-width: 780px;
+      margin: 0 auto 1.2rem;
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--coral);
+    }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--text-soft);
+      max-width: 540px;
+      margin: 0 auto 2.2rem;
+      line-height: 1.7;
+      font-weight: 600;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-pets {
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-pets span {
+      display: inline-block;
+      animation: bounce 1.8s ease-in-out infinite;
+    }
+    .hero-pets span:nth-child(2) { animation-delay: 0.2s; }
+    .hero-pets span:nth-child(3) { animation-delay: 0.4s; }
+    .hero-pets span:nth-child(4) { animation-delay: 0.6s; }
+    .hero-pets span:nth-child(5) { animation-delay: 0.8s; }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      45%       { transform: translateY(-10px); }
+    }
+    .btn-main {
+      display: inline-block;
+      background: var(--plum);
+      color: var(--white);
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.2rem;
+      padding: 1rem 2.4rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+      box-shadow: 0 6px 24px rgba(45,27,78,0.25);
+      position: relative;
+      z-index: 1;
+    }
+    .btn-main:hover {
+      background: var(--coral);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(255,107,107,0.35);
+    }
+    .hero-trust {
+      margin-top: 1.5rem;
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      font-weight: 700;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-trust span { color: var(--mint); margin: 0 0.4rem; }
+
+    /* ─── WHO IS THIS FOR ─── */
+    .who {
+      background: var(--plum);
+      color: var(--white);
+      text-align: center;
+      padding: 3.5rem 2rem;
+    }
+    .who h2 {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      margin-bottom: 2rem;
+      color: var(--amber);
+    }
+    .who-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .who-pill {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.18);
+      border-radius: 50px;
+      padding: 0.65rem 1.4rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .who-pill:hover { background: rgba(245,166,35,0.2); border-color: var(--amber); }
+
+    /* ─── BENEFITS ─── */
+    .benefits {
+      padding: 5rem 2rem;
+      text-align: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-family: 'Fredoka One', cursive;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mint);
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--plum);
+      margin-bottom: 0.8rem;
+    }
+    .section-desc {
+      color: var(--text-soft);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto 3rem;
+      line-height: 1.7;
+      font-weight: 600;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .benefit-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem 1.8rem;
+      text-align: left;
+      border: 2px solid transparent;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 12px rgba(45,27,78,0.06);
+    }
+    .benefit-card:hover {
+      border-color: var(--amber);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 32px rgba(45,27,78,0.12);
+    }
+    .card-icon {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .card-title {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.2rem;
+      color: var(--plum);
+      margin-bottom: 0.5rem;
+    }
+    .card-desc {
+      font-size: 0.92rem;
+      color: var(--text-soft);
+      line-height: 1.65;
+      font-weight: 600;
+    }
+
+    /* ─── PAWS DIVIDER ─── */
+    .paw-divider {
+      text-align: center;
+      font-size: 1.6rem;
+      padding: 1rem 0;
+      color: var(--lavender);
+      letter-spacing: 0.5rem;
+      opacity: 0.6;
+    }
+
+    /* ─── HOW IT WORKS ─── */
+    .how {
+      background: linear-gradient(135deg, #f0e6ff 0%, #fff3e0 100%);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      counter-reset: steps;
+    }
+    .step {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      width: 220px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 18px rgba(45,27,78,0.08);
+      position: relative;
+    }
+    .step-num {
+      width: 42px;
+      height: 42px;
+      background: var(--coral);
+      color: var(--white);
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.1rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .step-title {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.1rem;
+      color: var(--plum);
+      margin-bottom: 0.5rem;
+    }
+    .step-desc {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      line-height: 1.6;
+      font-weight: 600;
+    }
+    .step-arrow {
+      font-size: 1.5rem;
+      color: var(--lavender);
+      align-self: center;
+      flex-shrink: 0;
+    }
+    @media (max-width: 640px) { .step-arrow { display: none; } }
+
+    /* ─── SOCIAL PROOF ─── */
+    .proof {
+      padding: 5rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .testimonial {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 1.8rem;
+      text-align: left;
+      border-left: 5px solid var(--mint);
+      box-shadow: 0 2px 12px rgba(45,27,78,0.06);
+    }
+    .stars { font-size: 1rem; margin-bottom: 0.8rem; color: var(--amber); }
+    .testimonial-text {
+      font-size: 0.92rem;
+      color: var(--text-soft);
+      line-height: 1.65;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .testimonial-author {
+      font-family: 'Fredoka One', cursive;
+      font-size: 0.95rem;
+      color: var(--plum);
+    }
+    .testimonial-role {
+      font-size: 0.8rem;
+      color: var(--text-soft);
+      font-weight: 700;
+    }
+
+    /* ─── CTA SECTION ─── */
+    .cta-section {
+      background: var(--plum);
+      padding: 6rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .cta-blob {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.08;
+    }
+    .cta-section .section-title { color: var(--white); position: relative; z-index: 1; }
+    .cta-section .section-desc  { color: var(--lavender); position: relative; z-index: 1; }
+    .btn-cta {
+      display: inline-block;
+      background: var(--amber);
+      color: var(--plum);
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.3rem;
+      padding: 1.1rem 2.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 8px 28px rgba(245,166,35,0.4);
+      position: relative;
+      z-index: 1;
+    }
+    .btn-cta:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 12px 36px rgba(245,166,35,0.55);
+    }
+    .cta-guarantee {
+      margin-top: 1.2rem;
+      color: var(--lavender);
+      font-size: 0.88rem;
+      font-weight: 700;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: #1A0F30;
+      color: var(--lavender);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    footer a { color: var(--amber); text-decoration: none; }
+
+    /* ─── SCROLL REVEAL ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 3.5rem 1.5rem 3rem; }
+      .btn-main, .btn-cta { font-size: 1.05rem; padding: 0.9rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-inner">
+      <span>🐾 Custom Landing Page</span>
+      <span>🐶 For Dog Groomers</span>
+      <span>🐱 For Cat Clinics</span>
+      <span>🐦 For Pet Shops</span>
+      <span>🐰 For Vet Practices</span>
+      <span>🐾 Mobile-First Design</span>
+      <span>⚡ Fast Delivery</span>
+      <span>📱 Converts on Every Device</span>
+      <span>🐾 Custom Landing Page</span>
+      <span>🐶 For Dog Groomers</span>
+      <span>🐱 For Cat Clinics</span>
+      <span>🐦 For Pet Shops</span>
+      <span>🐰 For Vet Practices</span>
+      <span>🐾 Mobile-First Design</span>
+      <span>⚡ Fast Delivery</span>
+      <span>📱 Converts on Every Device</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="logo">Easy<span>Page</span>X</a>
+    <a href="https://easypagex.github.io/48/" class="nav-cta" target="_blank">Get My Landing Page</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- floating background paws -->
+    <div class="hero-bg-paws" aria-hidden="true">
+      <span class="paw-float" style="top:8%;left:6%;animation-delay:0s">🐾</span>
+      <span class="paw-float" style="top:20%;right:8%;animation-delay:2s">🐾</span>
+      <span class="paw-float" style="bottom:18%;left:12%;animation-delay:4s">🐾</span>
+      <span class="paw-float" style="bottom:10%;right:5%;animation-delay:1.5s">🐾</span>
+      <span class="paw-float" style="top:55%;left:3%;animation-delay:3s">🐾</span>
+      <span class="paw-float" style="top:40%;right:3%;animation-delay:5s">🐾</span>
+    </div>
+
+    <div class="hero-pets">
+      <span>🐶</span><span>🐱</span><span>🐦</span><span>🐰</span><span>🐾</span>
+    </div>
+    <div class="hero-eyebrow">For Pet Small Businesses</div>
+    <h1>Your Pet Business Deserves a Page That <em>Wags Tails</em></h1>
+    <p class="hero-sub">
+      Professional landing pages built specifically for pet groomers, veterinarians, pet shops, trainers, and animal lovers who mean business.
+    </p>
+    <a href="https://easypagex.github.io/48/" class="btn-main" target="_blank">🐾 Get My Landing Page</a>
+    <p class="hero-trust">
+      <span>✓</span> Review before it goes live
+      <span>✓</span> Zero tech headaches
+      <span>✓</span> Real results from day one
+    </p>
+  </section>
+
+  <!-- WHO IS THIS FOR -->
+  <section class="who">
+    <h2>Made for Every Kind of Pet Business</h2>
+    <div class="who-grid">
+      <div class="who-pill">🛁 Dog Groomers</div>
+      <div class="who-pill">🩺 Veterinary Clinics</div>
+      <div class="who-pill">🏪 Pet Shops & Stores</div>
+      <div class="who-pill">🐕 Dog Trainers</div>
+      <div class="who-pill">🏠 Pet Boarding & Daycare</div>
+      <div class="who-pill">🐈 Cat Cafés</div>
+      <div class="who-pill">📸 Pet Photographers</div>
+      <div class="who-pill">🦴 Pet Nutrition Specialists</div>
+      <div class="who-pill">🐾 Animal Shelters & Rescues</div>
+      <div class="who-pill">🐠 Aquariums & Exotic Pets</div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits reveal">
+    <p class="section-label">Why It Works</p>
+    <h2 class="section-title">Everything Your Pet Business Needs to Grow Online</h2>
+    <p class="section-desc">
+      From booking enquiries to WhatsApp calls — your landing page becomes your 24/7 sales assistant.
+    </p>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <span class="card-icon">⚡</span>
+        <h3 class="card-title">Lightning-Fast Delivery</h3>
+        <p class="card-desc">Your page is built and delivered fast, so you can start attracting clients without waiting weeks for a developer to respond.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="card-icon">🎨</span>
+        <h3 class="card-title">Designed for Your Brand</h3>
+        <p class="card-desc">Custom colours, your logo, your photos — every detail reflects your pet business's unique personality and makes a lasting first impression.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="card-icon">📱</span>
+        <h3 class="card-title">100% Mobile Responsive</h3>
+        <p class="card-desc">Most pet owners search on their phones. Your page looks flawless on every device — from a small smartphone to a desktop screen.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="card-icon">🎯</span>
+        <h3 class="card-title">Built to Convert Visitors</h3>
+        <p class="card-desc">Strategic calls-to-action, WhatsApp buttons, and phone links guide every visitor toward booking, calling, or contacting you right away.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="card-icon">🔧</span>
+        <h3 class="card-title">Zero Tech Headaches</h3>
+        <p class="card-desc">No website builders, no monthly subscriptions, no confusing dashboards. You focus on your animals — we handle the technology completely.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="card-icon">📈</span>
+        <h3 class="card-title">Real Results from Day One</h3>
+        <p class="card-desc">A dedicated landing page gives your business a credible, professional presence that earns trust and converts curious visitors into loyal clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="paw-divider" aria-hidden="true">🐾 🐾 🐾 🐾 🐾</div>
+
+  <!-- HOW IT WORKS -->
+  <section class="how reveal">
+    <p class="section-label">Simple Process</p>
+    <h2 class="section-title">From Order to Online in No Time</h2>
+    <p class="section-desc">Getting your pet business online has never been this straightforward.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">You Order</div>
+        <p class="step-desc">Click the button, complete your order, and share a few details about your pet business.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">We Build</div>
+        <p class="step-desc">Our team designs your custom landing page, tailored to your brand, services, and audience.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">You Review</div>
+        <p class="step-desc">We send you a preview. You approve it (or ask for tweaks) before anything goes live.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">Go Live 🎉</div>
+        <p class="step-desc">Your pet business is now online, professional, and ready to bring in new clients every day.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="proof reveal">
+    <p class="section-label">Happy Pet Businesses</p>
+    <h2 class="section-title">Pet Owners Trust It. Business Owners Love It.</h2>
+    <p class="section-desc">Real businesses seeing real results after getting their landing page live.</p>
+    <div class="testimonials">
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"I had no idea a single page could bring in so many new grooming bookings. Clients tell me they found me through my page all the time now. Worth every penny."</p>
+        <div class="testimonial-author">Marta G.</div>
+        <div class="testimonial-role">🐶 Dog Grooming Salon, Madrid</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"The WhatsApp button alone changed everything. Pet owners can message me instantly from the page. Appointments have gone up noticeably since launch."</p>
+        <div class="testimonial-author">Carlos R.</div>
+        <div class="testimonial-role">🩺 Veterinary Clinic, Barcelona</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"I was worried it wouldn't match my brand, but the design was spot on. My cat café looks beautiful online. Tourists find us through the page every weekend."</p>
+        <div class="testimonial-author">Sofía M.</div>
+        <div class="testimonial-role">🐈 Cat Café Owner, Valencia</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-bg" aria-hidden="true">
+      <div class="cta-blob" style="width:400px;height:400px;background:var(--coral);top:-100px;left:-100px;"></div>
+      <div class="cta-blob" style="width:300px;height:300px;background:var(--mint);bottom:-80px;right:-60px;"></div>
+    </div>
+    <p class="section-label" style="color:var(--amber);position:relative;z-index:1;">Ready to Grow?</p>
+    <h2 class="section-title">Give Your Pet Business the Online Presence It Deserves</h2>
+    <p class="section-desc">Join pet businesses already attracting more clients with a page that works as hard as they do.</p>
+    <a href="https://easypagex.github.io/48/" class="btn-cta" target="_blank">🐾 Get My Landing Page</a>
+    <p class="cta-guarantee">✓ Satisfaction guaranteed &nbsp;·&nbsp; ✓ Review before it goes live &nbsp;·&nbsp; ✓ We handle everything</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 <a href="https://easypagex.github.io/48/" target="_blank">EasyPageX</a> · Landing Pages, Fast &amp; Easy · All rights reserved</p>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => io.observe(el));
+
+    // Reduced motion respect
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.querySelectorAll('.paw-float, .hero-pets span, .ticker-inner').forEach(el => {
+        el.style.animation = 'none';
+      });
+    }
+  </script>
+</body>
+</html>
